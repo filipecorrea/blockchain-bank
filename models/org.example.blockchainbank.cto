@@ -12,31 +12,22 @@
  * limitations under the License.
  */
 
-/**
- * Write your model definitions here
- */
-
 namespace org.example.blockchainbank
 
-participant SampleParticipant identified by participantId {
-  o String participantId
+participant Customer identified by customerId {
+  o String customerId
   o String firstName
   o String lastName
 }
 
-asset SampleAsset identified by assetId {
-  o String assetId
-  --> SampleParticipant owner
-  o String value
+asset Account identified by accountId {
+  o String accountId
+  --> Customer owner
+  o Double balance
 }
 
-transaction SampleTransaction {
-  --> SampleAsset asset
-  o String newValue
-}
-
-event SampleEvent {
-  --> SampleAsset asset
-  o String oldValue
-  o String newValue
+transaction AccountTransfer {
+  --> Account from
+  --> Account to
+  o Double amount
 }

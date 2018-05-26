@@ -12,12 +12,9 @@
  * limitations under the License.
  */
 
-/**
- * Sample access control list.
- */
 rule EverybodyCanReadEverything {
     description: "Allow all participants read access to all resources"
-    participant: "org.example.blockchainbank.SampleParticipant"
+    participant: "org.example.blockchainbank.Customer"
     operation: READ
     resource: "org.example.blockchainbank.*"
     action: ALLOW
@@ -25,17 +22,17 @@ rule EverybodyCanReadEverything {
 
 rule EverybodyCanSubmitTransactions {
     description: "Allow all participants to submit transactions"
-    participant: "org.example.blockchainbank.SampleParticipant"
+    participant: "org.example.blockchainbank.Customer"
     operation: CREATE
-    resource: "org.example.blockchainbank.SampleTransaction"
+    resource: "org.example.blockchainbank.AccountTransfer"
     action: ALLOW
 }
 
 rule OwnerHasFullAccessToTheirAssets {
     description: "Allow all participants full access to their assets"
-    participant(p): "org.example.blockchainbank.SampleParticipant"
+    participant(p): "org.example.blockchainbank.Customer"
     operation: ALL
-    resource(r): "org.example.blockchainbank.SampleAsset"
+    resource(r): "org.example.blockchainbank.Account"
     condition: (r.owner.getIdentifier() === p.getIdentifier())
     action: ALLOW
 }
