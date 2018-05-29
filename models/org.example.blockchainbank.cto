@@ -31,3 +31,13 @@ transaction AccountTransfer {
   --> Account to
   o Double amount
 }
+
+transaction AddFunds {
+  --> Account account
+  o Double amount
+}
+
+transaction Withdrawal {
+  --> Account account
+  o Double amount
+}
