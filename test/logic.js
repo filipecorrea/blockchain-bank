@@ -13,9 +13,6 @@
  */
 
 'use strict';
-/**
- * Write the unit tests for your transction processor functions here
- */
 
 const AdminConnection = require('composer-admin').AdminConnection;
 const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
