@@ -19,18 +19,18 @@
   "email": "filipecorrea@me.com",
   "license": "Apache-2.0",
   "devDependencies": {
-    "composer-admin": "^0.19.6",
-    "composer-cli": "^0.19.6",
-    "composer-client": "^0.19.6",
-    "composer-common": "^0.19.6",
-    "composer-connector-embedded": "^0.19.6",
-    "composer-cucumber-steps": "^0.19.6",
     "chai": "latest",
     "chai-as-promised": "latest",
+    "composer-admin": "^0.20.5",
+    "composer-cli": "^0.20.5",
+    "composer-client": "^0.20.5",
+    "composer-common": "^0.20.5",
+    "composer-connector-embedded": "^0.20.5",
+    "composer-cucumber-steps": "^0.20.5",
     "cucumber": "^2.2.0",
     "eslint": "latest",
-    "nyc": "latest",
     "mkdirp": "latest",
-    "mocha": "latest"
+    "mocha": "latest",
+    "nyc": "latest"
   }
 }
